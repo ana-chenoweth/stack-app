@@ -6,13 +6,12 @@ class Pila
 {
 public:
     Pila();
+    ~Pila();
 
 private:
     int tope;
     int cap;
     T *elemento;
-    bool EstaLlena() const;
-    void Redimensionar();
 };
 
 #include "Pila.tpp"

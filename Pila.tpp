@@ -11,3 +11,10 @@ Pila<T>::Pila()
          throw "No es posible construir un Pila";
      }
 }
+//*******************************************************
+//Destructor
+template <typename T>
+Pila<T>::~Pila()
+{
+   delete []elemento;
+}
