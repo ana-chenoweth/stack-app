@@ -15,6 +15,7 @@ public:
     Vector(const Vector &v);
     Vector & operator=(const Vector &v);
     ~Vector();
+    int ObtenerDim() const;
 private:
     int dim;
     //double componente[MAXDIM];

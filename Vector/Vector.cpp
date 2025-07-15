@@ -51,6 +51,12 @@ Vector & Vector::operator=(const Vector &v)
     return *this;
 }
 //***********************************
+Vector::~Vector()
+{
+   //std::cout<<"destruyendo vector"<<std::endl;
+   delete [] componente;
+}
+//***********************************
 void Vector::EstablecerDim(int dim)
 {
     //this->dim//puntero a un objeto
@@ -58,8 +64,7 @@ void Vector::EstablecerDim(int dim)
     this->dim = dim;
 }
 //***********************************
-Vector::~Vector()
+int Vector::ObtenerDim() const
 {
-   //std::cout<<"destruyendo vector"<<std::endl;
-   delete [] componente;
+    return dim;
 }
