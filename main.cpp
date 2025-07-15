@@ -3,6 +3,7 @@
 #include <string>
 #include <limits>
 #include "Pila/Pila.hpp"
+#include "Vector/Vector.hpp"
 
 using namespace std;
 
@@ -151,6 +152,76 @@ int main()
             pilaDoubles2 = pilaDoubles;
             cout << "\nPila 2: \n";
             pilaDoubles2.Imprimir();
+        }
+        cout << "\n/******** PILAS DE VECTORES ******/\n";
+        Pila<Vector> PilaVector;
+        char respuesta3;
+        int tam;
+
+
+        do {
+            cout << "Tamaño del vector:";
+            cin >> tam;
+            Vector v(tam);
+            cout << "\nCapturando componentes vector: \n";
+            cin >> v;
+
+            PilaVector.Agregar(v);
+
+            cout << "Elemento agregado. Ahora la pila tiene " << PilaVector.ObtenerTamano() << " elemento(s) y una capacidad de " << miPila.ObtenerCap() << "\n";
+            PilaVector.Imprimir();
+            cout << endl << endl;
+
+            do {
+                cout << "Quiere agregar otro vector? (s/n): ";
+                cin >> respuesta3;
+                respuesta3 = tolower(respuesta3);
+            } while (respuesta3 != 's' && respuesta3 != 'n');
+        } while (respuesta3 == 's');
+
+        do{
+            cout << "Quiere vaciar la pila? (s/n): ";
+            cin >> respuesta3;
+            respuesta3 = tolower(respuesta3);
+        }while(respuesta3 != 's' && respuesta3 != 'n');
+
+        if(respuesta3 == 's') {
+                pilaDoubles.Vaciar();
+                cout << "Pila vaciada con exito.\n\n";
+        }
+
+        if(!pilaDoubles.EstaVacia()){
+
+        cout << "Eliminando elementos" << endl;
+        do {
+            cout << "Elemento a eliminar: " << PilaVector.ObtenerTope() << endl;
+            PilaVector.Eliminar();
+
+            cout << "\nElemento eliminado. Ahora la pila tiene " << PilaVector.ObtenerTamano() << " elemento(s) y una capacidad de " << miPila.ObtenerCap() << "\n";
+            PilaVector.Imprimir();
+            cout << endl << endl;
+
+            do {
+                cout << "Quiere eliminar otro vector? (s/n): ";
+                cin >> respuesta3;
+                respuesta3 = tolower(respuesta3);
+            } while (respuesta3 != 's' && respuesta3 != 'n');
+        } while (respuesta3 == 's');
+        }
+
+        do{
+           cout << "Quiere hacer una copia de esta pila de Vector? ";
+            cin >> respuesta3;
+            respuesta3 = tolower(respuesta3);
+        }while(respuesta3 != 's' && respuesta3 != 'n');
+
+        if(respuesta3 == 's'){
+            Pila<Vector> pilaVector2;
+            cout << "Pila 1: \n";
+            PilaVector.Imprimir();
+            pilaVector2 = PilaVector;
+            cout << "\nPila 2: \n";
+            pilaVector2.Imprimir();
         }
     }catch(const char *msn){
         cerr << "Error: " << msn << endl;
