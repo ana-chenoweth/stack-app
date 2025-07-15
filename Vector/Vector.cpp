@@ -109,6 +109,17 @@ Vector Vector::Restar(Vector v) const
     return s;
 }
 //***********************************
+// funciones externas
+Vector operator*(double escalar, const Vector &v)
+{
+    Vector s(v.dim);
+    for(int i=0; i<v.dim; ++i)
+    {
+        s.componente[i] = v.componente[i] * escalar;
+    }
+    return s;
+}
+//***********************************
 std::ostream & operator<<(std::ostream &out,const Vector &v)
 {
     out << "(";
