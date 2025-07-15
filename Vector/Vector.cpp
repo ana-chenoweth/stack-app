@@ -68,6 +68,14 @@ int Vector::ObtenerDim() const
 {
     return dim;
 }
+//***********************************
+void Vector::Capturar()
+{
+    for(int i = 0; i < dim; ++i)
+    {
+     std::cin >>componente[i];
+    }
+}
 
 //***********************************
 std::istream & operator>>(std::istream &in,Vector &v)
