@@ -90,6 +90,12 @@ bool Pila<T>::EstaLlena() const
 }
 //****************************************************
 template <typename T>
+bool Pila<T>::EstaVacia() const
+{
+    return tope == -1;
+}
+//****************************************************
+template <typename T>
 void Pila<T>::Redimensionar()
 {
     T * aux = elemento;

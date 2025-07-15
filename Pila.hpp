@@ -15,6 +15,7 @@ public:
     void Vaciar();
     int ObtenerTamano() const;
     int ObtenerCap() const;
+    bool EstaVacia() const;
 private:
     int tope;
     int cap;
