@@ -68,3 +68,14 @@ int Vector::ObtenerDim() const
 {
     return dim;
 }
+
+//***********************************
+std::istream & operator>>(std::istream &in,Vector &v)
+{
+
+    for(int i = 0; i < v.dim; ++i)
+    {
+     in >> v.componente[i];
+    }
+    return in;
+}

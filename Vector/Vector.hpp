@@ -8,7 +8,7 @@ const int MAXDIM = 100; // Definimos un tamaño máximo para el vector
 
 
 class Vector{
-
+    friend std::istream & operator>>(std::istream &in,Vector &v);
 public:
     //Vector(); ya no es ocupado;
     explicit Vector(int dim = 3); //para no hacer una conversion explicita de enteros a vectores
