@@ -50,3 +50,10 @@ void Pila<T>::Agregar(T valor)
     if(EstaLlena()) Redimensionar();
     elemento[++tope] = valor;
 }
+//****************************************************
+template <typename T>
+void Pila<T>::Eliminar()
+{
+    if(EstaVacia()) throw "No se puede eliminar elemento; la pila est\xA0 vac\xA1 \ba";
+    --tope;
+}

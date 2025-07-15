@@ -10,6 +10,7 @@ public:
     Pila(const Pila &p);
     Pila &operator=(const Pila &p);
     void Agregar(T valor);
+    void Eliminar();
 private:
     int tope;
     int cap;
