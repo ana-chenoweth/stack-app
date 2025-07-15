@@ -2,7 +2,7 @@
 #include <cctype>
 #include <string>
 #include <limits>
-#include "Pila.hpp"
+#include "Pila/Pila.hpp"
 
 using namespace std;
 
@@ -31,7 +31,7 @@ int main()
             miPila.Imprimir();
             cout << endl << endl;
             do{
-                cout << "\250Quiere agregar otro elemento? (s/n): ";
+                cout << "Quiere agregar otro elemento? (s/n): ";
                 cin >> respuesta;
                 respuesta = tolower(respuesta);
             }while(respuesta != 's' && respuesta != 'n');
@@ -39,7 +39,7 @@ int main()
 
 
         do{
-            cout << "\250Quiere vaciar la pila? (s/n): ";
+            cout << "Quiere vaciar la pila? (s/n): ";
             cin >> respuesta;
             respuesta = tolower(respuesta);
         }while(respuesta != 's' && respuesta != 'n');
@@ -59,7 +59,7 @@ int main()
             miPila.Imprimir();
             cout << endl << endl;
             do{
-                cout << "\250Quiere eliminar otro elemento? (s/n): ";
+                cout << "Quiere eliminar otro elemento? (s/n): ";
                 cin >> respuesta;
                 respuesta = tolower(respuesta);
             }while(respuesta != 's' && respuesta != 'n');
@@ -67,7 +67,7 @@ int main()
         }
 
         do{
-           cout << "\250Quiere hacer una copia de esta pila de int? ";
+           cout << "Quiere hacer una copia de esta pila de int? ";
             cin >> respuesta;
             respuesta = tolower(respuesta);
         }while(respuesta != 's' && respuesta != 'n');
