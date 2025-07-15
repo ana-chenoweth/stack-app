@@ -14,6 +14,7 @@ public:
     explicit Vector(int dim = 3); //para no hacer una conversion explicita de enteros a vectores
     Vector(const Vector &v);
     Vector & operator=(const Vector &v);
+    ~Vector();
 private:
     int dim;
     //double componente[MAXDIM];

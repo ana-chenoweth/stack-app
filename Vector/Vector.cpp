@@ -57,3 +57,9 @@ void Vector::EstablecerDim(int dim)
     if (dim < 1)throw "Valor fuera de rango";
     this->dim = dim;
 }
+//***********************************
+Vector::~Vector()
+{
+   //std::cout<<"destruyendo vector"<<std::endl;
+   delete [] componente;
+}
