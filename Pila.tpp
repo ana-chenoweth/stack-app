@@ -96,6 +96,18 @@ bool Pila<T>::EstaVacia() const
 }
 //****************************************************
 template <typename T>
+void Pila<T>::Imprimir() const
+{
+    if(EstaVacia()) return;
+
+    for(int i = 0; i <= tope; ++i)
+    {
+        std::cout << elemento[i] << ", ";
+    }
+    std::cout << "\b\b <- tope" << std::endl;
+}
+//****************************************************
+template <typename T>
 void Pila<T>::Redimensionar()
 {
     T * aux = elemento;

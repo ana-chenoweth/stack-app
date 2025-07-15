@@ -16,6 +16,7 @@ public:
     int ObtenerTamano() const;
     int ObtenerCap() const;
     bool EstaVacia() const;
+    void Imprimir() const;
 private:
     int tope;
     int cap;
