@@ -19,7 +19,8 @@ public:
     int ObtenerDim() const;
     void Capturar();
     void Imprimir() const;
-    
+    //operaciones
+    Vector operator+(Vector v)const;
 private:
     int dim;
     //double componente[MAXDIM];
