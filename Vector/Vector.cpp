@@ -76,7 +76,17 @@ void Vector::Capturar()
      std::cin >>componente[i];
     }
 }
-
+//***********************************
+std::ostream & operator<<(std::ostream &out,const Vector &v)
+{
+    out << "(";
+    for(int i = 0; i < v.dim; ++i)
+    {
+        out << v.componente[i] << ", ";
+    }
+    out << "\b\b)";
+    return out;
+}
 //***********************************
 std::istream & operator>>(std::istream &in,Vector &v)
 {

@@ -8,6 +8,7 @@ const int MAXDIM = 100; // Definimos un tamaño máximo para el vector
 
 
 class Vector{
+    friend std::ostream & operator<<(std::ostream &out,const Vector &v);
     friend std::istream & operator>>(std::istream &in,Vector &v);
 public:
     //Vector(); ya no es ocupado;
