@@ -98,6 +98,17 @@ Vector Vector::operator+(Vector v) const
     return s;
 }
 //***********************************
+Vector Vector::Restar(Vector v) const
+{
+    if(dim != v.dim)throw "Dimensiones incompatibles para restar";
+    Vector s(dim);
+    for(int i=0; i<dim; ++i)
+    {
+        s.componente[i] = componente[i]- v.componente[i];
+    }
+    return s;
+}
+//***********************************
 std::ostream & operator<<(std::ostream &out,const Vector &v)
 {
     out << "(";

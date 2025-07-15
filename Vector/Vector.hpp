@@ -21,6 +21,7 @@ public:
     void Imprimir() const;
     //operaciones
     Vector operator+(Vector v)const;
+    Vector Restar(Vector v) const;
 private:
     int dim;
     //double componente[MAXDIM];
