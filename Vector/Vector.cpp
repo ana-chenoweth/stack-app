@@ -109,6 +109,17 @@ Vector Vector::Restar(Vector v) const
     return s;
 }
 //***********************************
+int Vector::ProducPunto(Vector v) const
+{
+    if(dim != v.dim)throw "Dimensiones incompatibles para multiplicar";
+    int s;
+    for(int i=0; i<dim; ++i)
+    {
+        s += componente[i] * v.componente[i];
+    }
+    return s;
+}
+//***********************************
 // funciones externas
 Vector operator*(double escalar, const Vector &v)
 {
