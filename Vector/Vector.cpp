@@ -77,6 +77,16 @@ void Vector::Capturar()
     }
 }
 //***********************************
+void Vector::Imprimir() const
+{
+    std::cout << "[";
+    for(int i = 0; i < dim; ++i)
+    {
+     std::cout<< componente[i]<< ", ";
+    }
+    std::cout<< "\b\b]";
+}
+//***********************************
 std::ostream & operator<<(std::ostream &out,const Vector &v)
 {
     out << "(";
