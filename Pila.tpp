@@ -57,3 +57,22 @@ void Pila<T>::Eliminar()
     if(EstaVacia()) throw "No se puede eliminar elemento; la pila est\xA0 vac\xA1 \ba";
     --tope;
 }
+//****************************************************
+template <typename T>
+T Pila<T>::ObtenerTope() const
+{
+    if(EstaVacia()) throw "La pila esta vacia";
+    return elemento[tope];
+}
+//****************************************************
+template <typename T>
+int Pila<T>::ObtenerTamano() const
+{
+    return tope + 1;
+}
+//****************************************************
+template <typename T>
+int Pila<T>::ObtenerCap() const
+{
+    return cap;
+}

@@ -11,6 +11,9 @@ public:
     Pila &operator=(const Pila &p);
     void Agregar(T valor);
     void Eliminar();
+    T ObtenerTope() const;
+    int ObtenerTamano() const;
+    int ObtenerCap() const;
 private:
     int tope;
     int cap;
