@@ -12,12 +12,15 @@ public:
     void Agregar(T valor);
     void Eliminar();
     T ObtenerTope() const;
+    void Vaciar();
     int ObtenerTamano() const;
     int ObtenerCap() const;
 private:
     int tope;
     int cap;
     T *elemento;
+    bool EstaLlena() const;
+    void Redimensionar();
 };
 
 #include "Pila.tpp"

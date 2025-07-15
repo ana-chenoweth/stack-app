@@ -66,6 +66,12 @@ T Pila<T>::ObtenerTope() const
 }
 //****************************************************
 template <typename T>
+void Pila<T>::Vaciar()
+{
+    tope = -1;
+}
+//****************************************************
+template <typename T>
 int Pila<T>::ObtenerTamano() const
 {
     return tope + 1;
@@ -75,4 +81,21 @@ template <typename T>
 int Pila<T>::ObtenerCap() const
 {
     return cap;
+}
+//****************************************************
+template <typename T>
+bool Pila<T>::EstaLlena() const
+{
+    return tope == cap - 1;
+}
+//****************************************************
+template <typename T>
+void Pila<T>::Redimensionar()
+{
+    T * aux = elemento;
+    cap*=2;
+    elemento = new T[cap];
+    for(int i = 0; i<=tope; ++i)
+        elemento[i] = aux[i];
+    delete []aux;
 }
