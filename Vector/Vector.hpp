@@ -24,6 +24,7 @@ public:
     Vector operator+(Vector v)const;
     Vector Restar(Vector v) const;
     int ProducPunto(Vector v) const;
+    double Norma() const;
 private:
     int dim;
     //double componente[MAXDIM];

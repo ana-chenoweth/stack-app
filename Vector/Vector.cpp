@@ -120,6 +120,11 @@ int Vector::ProducPunto(Vector v) const
     return s;
 }
 //***********************************
+double Vector::Norma() const
+{
+    return sqrt(ProducPunto(*this));
+}
+//***********************************
 // funciones externas
 Vector operator*(double escalar, const Vector &v)
 {
