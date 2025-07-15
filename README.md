@@ -2,6 +2,8 @@
 
 This project implements a generic **stack data structure** in C++, allowing storage and manipulation of elements of any type (default is `int`). It includes functionalities such as adding and removing elements, deep copying, dynamic resizing, and printing the stack contents. The system is designed with an educational purpose in mind, to better understand how stacks work in memory and how to use C++ templates.
 
+<img src="media/program-stack.gif" alt="Video test" width="400">
+
 ## Features
 
 - Full implementation of a generic stack (`template`-based).
