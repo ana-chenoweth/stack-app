@@ -30,3 +30,10 @@ Vector::Vector(const Vector &v)
     }
     */
 }
+//***********************************
+void Vector::EstablecerDim(int dim)
+{
+    //this->dim//puntero a un objeto
+    if (dim < 1)throw "Valor fuera de rango";
+    this->dim = dim;
+}
