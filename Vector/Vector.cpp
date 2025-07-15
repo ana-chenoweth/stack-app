@@ -1,11 +1,12 @@
 #include <math.h>
 #include "Vector.hpp"
 //***********************************
-Vector::Vector()
+Vector::Vector(int dim /* = 3*/)
 {
  EstablecerDim(dim);
  try
      {
+        componente = new double[dim];
          for(int i = 0; i < dim; ++i){
              componente[i] = 0;
          }
@@ -16,6 +17,8 @@ Vector::Vector()
 //***********************************
 Vector::Vector(const Vector &v)
 {
+    *this=v;
+    /*
     EstablecerDim(v.dim);
     try
     {
@@ -25,4 +28,5 @@ Vector::Vector(const Vector &v)
     }catch(std::bad_alloc &){
          throw "No es posible construir un Vector";
     }
+    */
 }
