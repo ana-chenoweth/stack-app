@@ -31,6 +31,26 @@ Vector::Vector(const Vector &v)
     */
 }
 //***********************************
+Vector & Vector::operator=(const Vector &v)
+{
+
+    if(this == &v) return *this;
+    //if(dim != v.dim){
+    try{
+        dim = v.dim;
+        delete []componente;
+        componente = new double[dim];
+
+        //}
+        for(int i = 0; i < dim; ++i){
+                componente[i] = v.componente[i];
+        }
+    }catch(std::bad_alloc &){
+         throw "No es posible construir un Vector";
+    }
+    return *this;
+}
+//***********************************
 void Vector::EstablecerDim(int dim)
 {
     //this->dim//puntero a un objeto
