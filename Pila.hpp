@@ -7,6 +7,8 @@ class Pila
 public:
     Pila();
     ~Pila();
+    Pila(const Pila &p);
+    Pila &operator=(const Pila &p);
 
 private:
     int tope;
