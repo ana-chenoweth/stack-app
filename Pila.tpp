@@ -43,3 +43,10 @@ Pila<T> & Pila<T>::operator=(const Pila &p)
     }
     return *this;
 }
+//****************************************************
+template <typename T>
+void Pila<T>::Agregar(T valor)
+{
+    if(EstaLlena()) Redimensionar();
+    elemento[++tope] = valor;
+}

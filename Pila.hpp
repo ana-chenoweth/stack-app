@@ -9,7 +9,7 @@ public:
     ~Pila();
     Pila(const Pila &p);
     Pila &operator=(const Pila &p);
-
+    void Agregar(T valor);
 private:
     int tope;
     int cap;
